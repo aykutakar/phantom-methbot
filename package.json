@@ -11,7 +11,7 @@
     },
     "devDependencies": {},
     "scripts": {
-        "start": "phantomjs --proxy=127.0.0.1:3000 bot.js"
+        "start": "node run-F-bot.js"
     },
     "author": "Roman Lezhnin",
     "license": ""

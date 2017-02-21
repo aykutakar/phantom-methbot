@@ -1,20 +1,20 @@
 var exec = require('child_process').exec
-    , logger = require('./logger')('MFA-traffic-generator')
+    //, logger = require('./logger')('MFA-traffic-generator')
 
     , scheduleCounter = 0;
 
 function runCrawlers() {
     for (var i = 0; i < 10; i += 1) {
-        var process1 = exec('casperjs --proxy=127.0.0.1:3000 traffic-bot.js')
-            , process2 = exec('casperjs --proxy=127.0.0.1:3000 traffic-bot.js')
-            , process3 = exec('casperjs --proxy=127.0.0.1:3000 traffic-bot.js')
-            , process4 = exec('casperjs --proxy=127.0.0.1:3000 traffic-bot.js')
-            , process5 = exec('casperjs --proxy=127.0.0.1:3000 traffic-bot.js')
-            , process6 = exec('casperjs --proxy=127.0.0.1:3000 traffic-bot.js')
-            , process7 = exec('casperjs --proxy=127.0.0.1:3000 traffic-bot.js')
-            , process8 = exec('casperjs --proxy=127.0.0.1:3000 traffic-bot.js')
-            , process9 = exec('casperjs --proxy=127.0.0.1:3000 traffic-bot.js')
-            , process10 = exec('casperjs --proxy=127.0.0.1:3000 traffic-bot.js');
+        var process1 = exec('phantomjs --proxy=127.0.0.1:3000 bot.js')
+            , process2 = exec('phantomjs --proxy=127.0.0.1:3000 bot.js')
+            , process3 = exec('phantomjs --proxy=127.0.0.1:3000 bot.js')
+            , process4 = exec('phantomjs --proxy=127.0.0.1:3000 bot.js')
+            , process5 = exec('phantomjs --proxy=127.0.0.1:3000 bot.js')
+            , process6 = exec('phantomjs --proxy=127.0.0.1:3000 bot.js')
+            , process7 = exec('phantomjs --proxy=127.0.0.1:3000 bot.js')
+            , process8 = exec('phantomjs --proxy=127.0.0.1:3000 bot.js')
+            , process9 = exec('phantomjs --proxy=127.0.0.1:3000 bot.js')
+            , process10 = exec('phantomjs --proxy=127.0.0.1:3000 bot.js');
 
         process1.stdout.on('data', function (data) {
             //scheduleCounter++;

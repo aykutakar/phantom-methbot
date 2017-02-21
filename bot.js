@@ -50,10 +50,10 @@ page.open(startRandomRefererWashingPoint, function (status) {
             var fakeLink = document.createElement('a');
             fakeLink.setAttribute('href', 'http://web-dreamteam.com');
             fakeLink.setAttribute('id', "washingpoint")
-            document.body.appendChild(fakeLink);            
+            document.body.appendChild(fakeLink);
             document.querySelector("a#washingpoint").click();
         });
-         page.render('referer.png');
+        //page.render('./screens/referer-' + new Date() + '.png');
         //
         //
     }
@@ -93,7 +93,7 @@ page.onLoadFinished = function (status) {
             //           
         });
         console.log("ПОСКРОЛЛИЛ", scroll);
-        page.render('wdt-1.png');
+        //page.render('./screens/wdt-' + new Date() + '.png');
         var mousemove = page.evaluate(function () {
             function getRandomInt(min, max) {
                 return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -140,7 +140,7 @@ page.onLoadFinished = function (status) {
             //           
         });
         console.log("ПОВОДИЛ МЫШКОЙ", mousemove);
-        page.render('wdt-2.png');
+        //page.render('./screens/wdt-' + new Date() + '.png');
         phantom.exit();
     }
 };
